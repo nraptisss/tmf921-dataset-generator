@@ -1,0 +1,4049 @@
+[
+  {
+    "intentManagement": [
+      {
+        "id": "7c4f6b1e-3d34-4db5-b2a9-d5a53e55e9be",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/7c4f6b1e-3d34-4db5-b2a9-d5a53e55e9be",
+        "creationDate": "2023-03-08T14:30:00.000Z",
+        "description": "Create a high-speed network slice for a hospital remote surgery robot requiring ultra-low latency.",
+        "lifecycleStatus": "Active",
+        "name": "HighSpeedSliceForRobot",
+        "statusChangeDate": "2023-03-08T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "High speed network slice for hospital remote surgery robot",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1",
+                    "@type": "tio:Characteristic",
+                    "name": "latency",
+                    "value": "ultraLow",
+                    "tio:operator": "lessThan"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intentManagementAPI": [
+      {
+        "id": "a2e9f5c4-1b8d-47ae-b7ad-f1b6f4d3a1a5",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/a2e9f5c4-1b8d-47ae-b7ad-f1b6f4d3a1a5",
+        "creationDate": "2023-03-15T10:45:00.000Z",
+        "description": "Deploy a massive IoT network for agricultural sensors with low bandwidth requirements.",
+        "lifecycleStatus": "Active",
+        "name": "AgriculturalIoTSlice",
+        "statusChangeDate": "2023-03-15T10:45:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "IoT applications for agriculture",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Agricultural IoT network slice",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "IoTNetworkSlice",
+                "tio:specification": "lowBandwidth"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "b9f5a4d3-8c6a-48ef-85fe-f2e7da94bce0",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/b9f5a4d3-8c6a-48ef-85fe-f2e7da94bce0",
+        "creationDate": "2023-09-12T14:30:00.000Z",
+        "description": "Set up a secure VPN link for the Finance department with Gold isolation level.",
+        "lifecycleStatus": "Active",
+        "name": "FinanceGoldVPN",
+        "statusChangeDate": "2023-09-12T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Secure VPN link for Finance department with Gold isolation level.",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "VPNLink",
+                "tio:specification": "Gold"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "securityLevel",
+                "value": "high",
+                "tio:operator": "equals"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "uuid:1111",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/uuid:1111",
+        "creationDate": "2023-02-16T14:30:00.000Z",
+        "description": "Ensure high throughput for a stadium concert video stream.",
+        "lifecycleStatus": "Active",
+        "name": "StadiumConcertSlice",
+        "statusChangeDate": "2023-02-16T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "High throughput network slice for stadium concert video stream",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "throughput",
+                "value": "high",
+                "tio:operator": "greaterThanOrEqualTo"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/ae3b4d34-8ed1-48e6-97f9-bf4a71c77a23",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/ae3b4d34-8ed1-48e6-97f9-bf4a71c77a23",
+        "creationDate": "2022-08-16T14:15:00.000Z",
+        "description": "Provision a V2X communication slice for autonomous driving coordination.",
+        "lifecycleStatus": "Active",
+        "name": "AutonomousDrivingSlice",
+        "statusChangeDate": "2022-08-16T14:15:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Autonomous driving coordination",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "V2XCommunicationSlice",
+                "tio:specification": "mec"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "ultra-low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "9b5f6a4e-bc7d-4463-a8ee-f9c2ef0b2ac7",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/9b5f6a4e-bc7d-4463-a8ee-f9c2ef0b2ac7",
+        "creationDate": "2023-03-15T14:30:00Z",
+        "description": "Allocate bandwidth for a temporary construction site camera feed.",
+        "lifecycleStatus": "Active",
+        "name": "Temporary Construction Site Camera Feed Bandwidth Allocation",
+        "statusChangeDate": "2023-03-15T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Construction site",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Temporary construction site camera feed bandwidth allocation",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "BandwidthAllocation",
+                "tio:specification": "Temporary construction site camera feed"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "93f4c6e1-a8a7-4633-b5eb-d4ec34b2ef9d",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/93f4c6e1-a8a7-4633-b5eb-d4ec34b2ef9d",
+        "creationDate": "2023-03-16T14:30:00Z",
+        "description": "Optimize network energy usage during off-peak hours for residential areas.",
+        "lifecycleStatus": "Active",
+        "name": "ResidentialEnergyOptimization",
+        "statusChangeDate": "2023-03-16T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Residential energy optimization",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "Residential"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "EnergyUsage",
+                "value": "Optimized",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "a92d2c43-6f55-4c45-bb5e-f8db3e9ed7da",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/a92d2c43-6f55-4c45-bb5e-f8db3e9ed7da",
+        "creationDate": "2023-03-16T14:30:00.000Z",
+        "description": "Create a gaming slice with guaranteed ping below 20ms for e-sports tournament.",
+        "lifecycleStatus": "Active",
+        "name": "GamingSlice",
+        "statusChangeDate": "2023-03-16T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Gaming slice with guaranteed ping below 20ms for e-sports tournament.",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "GamingSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan",
+                "tio:unit": "ms",
+                "tio:value": {
+                  "@type": "xsd:int",
+                  "@value": "20"
+                }
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intentManagement": [
+      {
+        "id": "9a5d8bca-cc43-4c35-b7e6-8a1ee3f75fc",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/9a5d8bca-cc43-4c35-b7e6-8a1ee3f75fc",
+        "creationDate": "2023-08-14T14:30:00.000Z",
+        "description": "Setup a dedicated connection for emergency response vehicles with highest priority.",
+        "lifecycleStatus": "Active",
+        "name": "EmergencyResponsePriority",
+        "statusChangeDate": "2023-08-14T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Emergency response priority connection",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "DedicatedConnection",
+                "tio:specification": "EmergencyResponse"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "Priority",
+                "value": "highest",
+                "tio:operator": "equals"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "123e4567-e89b-12d3-a896-7196667c5a67",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/123e4567-e89b-12d3-a896-7196667c5a67",
+        "creationDate": "2023-03-16T14:30:00Z",
+        "description": "Deploy a drone fleet control network with high reliability.",
+        "lifecycleStatus": "Active",
+        "name": "DroneFleetControl",
+        "statusChangeDate": "2023-03-16T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Drone fleet control network with high reliability",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "DroneFleetNetwork",
+                "tio:specification": "HighReliability"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "reliability",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intentManagement": [
+      {
+        "id": "9ce44b6e-3f55-4c8a-a2eb-f1ee73db7a33",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/9ce44b6e-3f55-4c8a-a2eb-f1ee73db7a33",
+        "creationDate": "2023-03-21T14:30:00.000Z",
+        "description": "Establish a private 5G network for a manufacturing plant with predictable latency.",
+        "lifecycleStatus": "Active",
+        "name": "PredictableLatencySlice",
+        "statusChangeDate": "2023-03-21T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Private 5G network with predictable latency",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "5G"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "predictable",
+                "tio:operator": "lessThan",
+                "tio:parameterValue": {
+                  "@type": "xsd:integer",
+                  "@value": "10"
+                }
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "8a0b43f7-02e5-4d1c-bd6e-df9ed63f3e47",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/8a0b43f7-02e5-4d1c-bd6e-df9ed63f3e47",
+        "creationDate": "2023-03-15T14:30:00.000Z",
+        "description": "Configure QoS policies for video conferencing across multiple office branches.",
+        "lifecycleStatus": "Active",
+        "name": "VideoConferencingQoS",
+        "statusChangeDate": "2023-03-15T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Configure QoS policies for video conferencing",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "OfficeBranches",
+                "tio:specification": "Multi-Branch"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intentManagement": [
+      {
+        "id": "urn:uuid:7a8b6c5e-f1be-11ec-82ad-0242ac130003",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/urn:uuid:7a8b6c5e-f1be-11ec-82ad-0242ac130003",
+        "creationDate": "2023-02-22T14:30:00Z",
+        "description": "Create a broadcast slice for live news coverage with 4K video quality.",
+        "lifecycleStatus": "Active",
+        "name": "HighQualityNewsSlice",
+        "statusChangeDate": "2023-02-22T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "High quality news slice",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1",
+                    "@type": "tio:Characteristic",
+                    "name": "videoQuality",
+                    "value": "4K"
+                  },
+                  {
+                    "@id": "_:char2",
+                    "@type": "tio:Characteristic",
+                    "name": "latency",
+                    "value": "low",
+                    "tio:operator": "lessThan"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "Broadcast"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "1c3b7a45-4d44-4339-a6ad-f3e5a2b5a55f",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/1c3b7a45-4d44-4339-a6ad-f3e5a2b5a55f",
+        "creationDate": "2023-03-17T14:30:00Z",
+        "description": "Deploy edge computing resources for AR/VR retail applications.",
+        "lifecycleStatus": "Active",
+        "name": "EdgeComputingForRetailARVR",
+        "statusChangeDate": "2023-03-17T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Edge computing for AR/VR retail applications",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "EdgeComputingResources",
+                "tio:specification": "AR/VR retail applications"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "6a3d3b0e-8e9f-4dd2-92ed-8c1f5f7c43f4",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/6a3d3b0e-8e9f-4dd2-92ed-8c1f5f7c43f4",
+        "creationDate": "2023-03-16T14:30:00.000Z",
+        "description": "Set up a mission-critical network for power grid monitoring and control.",
+        "lifecycleStatus": "Active",
+        "name": "MissionCriticalNetwork",
+        "statusChangeDate": "2023-03-16T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Mission critical network for power grid monitoring and control",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  },
+                  {
+                    "@id": "_:char2"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "Network",
+                "tio:specification": "MissionCritical"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              },
+              {
+                "@id": "_:char2",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "9e5d4a44-34b4-46a2-8f6c-c7c1cd66c47a",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/9e5d4a44-34b4-46a2-8f6c-c7c1cd66c47a",
+        "creationDate": "2023-08-16T14:30:00.000Z",
+        "description": "Provision temporary high-capacity links for a music festival lasting 3 days.",
+        "lifecycleStatus": "Active",
+        "name": "MusicFestivalLink",
+        "statusChangeDate": "2023-08-16T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Temporary high-capacity links for music festival",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "Links",
+                "tio:specification": "HighCapacity"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "duration",
+                "value": "3 days",
+                "tio:operator": "lessThanOrEqualTo"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intentManagementAPI": [
+      {
+        "id": "8e1f4c0a-f9d3-455b-bf5f-6f2b82a7b45a",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/8e1f4c0a-f9d3-455b-bf5f-6f2b82a7b45a",
+        "creationDate": "2023-02-20T14:30:00.000Z",
+        "description": "Create isolated network segments for multi-tenant smart building systems.",
+        "lifecycleStatus": "Active",
+        "name": "IsolatedNetworkSegments",
+        "statusChangeDate": "2023-02-20T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Smart building systems",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Isolated network segments for multi-tenant smart building systems",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSegments",
+                "tio:specification": "Multi-tenant"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "Isolation",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "0e2f7a4c-8b6d-43a1-a3f1-f9af55ed45ce",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/0e2f7a4c-8b6d-43a1-a3f1-f9af55ed45ce",
+        "creationDate": "2023-02-16T10:30:00.000Z",
+        "description": "Deploy a railway communication system with seamless handover capabilities.",
+        "lifecycleStatus": "Active",
+        "name": "RailwayHandoverIntent",
+        "statusChangeDate": "2023-02-16T10:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Railway handover intent",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "RailwayCommunicationSystem",
+                "tio:specification": "SeamlessHandover"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "1c9d7b2a-0f3e-4e6d-a35a-c9f8c77f7ed5",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/1c9d7b2a-0f3e-4e6d-a35a-c9f8c77f7ed5",
+        "creationDate": "2023-08-23T14:30:00.000Z",
+        "description": "Configure adaptive bitrate streaming for mobile video platform users.",
+        "lifecycleStatus": "Active",
+        "name": "VideoStreamingConfig",
+        "statusChangeDate": "2023-08-23T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Adaptive bitrate streaming configuration for mobile video platform users",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "MobileVideoPlatform",
+                "tio:specification": "mobile_video"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "variable",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "6d5b4d8a-7a3e-42c9-a4f1-c2acdb98b4a0",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/6d5b4d8a-7a3e-42c9-a4f1-c2acdb98b4a0",
+        "creationDate": "2023-03-16T14:30:00.000Z",
+        "description": "Establish secure satellite backhaul for remote oil rig communications.",
+        "lifecycleStatus": "Active",
+        "name": "SecureSatelliteBackhaul",
+        "statusChangeDate": "2023-03-16T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Remote oil rig communications",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Secure satellite backhaul for remote oil rig communications",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "SatelliteBackhaul",
+                "tio:specification": "Secure"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "SecurityLevel",
+                "value": "High",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "e8d7c6f5-ae4a-4211-bb3d-f9b74db2e43d",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/e8d7c6f5-ae4a-4211-bb3d-f9b74db2e43d",
+        "creationDate": "2023-02-14T14:30:00.000Z",
+        "description": "Create a network slice for telemedicine consultations in rural clinics.",
+        "lifecycleStatus": "Active",
+        "name": "TelemedicineSlice",
+        "statusChangeDate": "2023-02-14T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Network slice for telemedicine consultations",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "Telemedicine"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "4f9d93e3-45c1-48a5-bf7b-e94b8e4cd6ca",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/4f9d93e3-45c1-48a5-bf7b-e94b8e4cd6ca",
+        "creationDate": "2022-09-22T14:30:00Z",
+        "description": "Deploy a smart city traffic management network with real-time analytics.",
+        "lifecycleStatus": "Active",
+        "name": "SmartCityTrafficManagement",
+        "statusChangeDate": "2022-09-22T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Smart city traffic management network with real-time analytics",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "TrafficManagementNetwork",
+                "tio:specification": "Real-time analytics"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "real-time",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "uuid:b5f8c6a4-0a51-49ae-b9d7-fbea52e48e43",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/uuid:b5f8c6a4-0a51-49ae-b9d7-fbea52e48e43",
+        "creationDate": "2023-03-16T14:30:00.000Z",
+        "description": "Set up redundant connections for stock exchange trading floor operations.",
+        "lifecycleStatus": "Active",
+        "name": "RedundantConnectionsForTradingFloor",
+        "statusChangeDate": "2023-03-16T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Financial services",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Redundant connections for stock exchange trading floor operations",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkConnection",
+                "tio:specification": "redundant"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "7f6e4a5b-1c9d-4ac3-a5c0-ea92e85b93fa",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/7f6e4a5b-1c9d-4ac3-a5c0-ea92e85b93fa",
+        "creationDate": "2023-03-15T14:30:00Z",
+        "description": "Provision IoT connectivity for smart meter infrastructure across the city.",
+        "lifecycleStatus": "Active",
+        "name": "IoTConnectivityForSmartMeters",
+        "statusChangeDate": "2023-03-15T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "IoT connectivity for smart meter infrastructure",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "SmartMeters",
+                "tio:specification": "City-wide IoT infrastructure"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "connectivityType",
+                "value": "IoT",
+                "tio:operator": "is"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "6f9d3e4a-8c1b-41ec-b3ac-8e3e5e0e2e43",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/6f9d3e4a-8c1b-41ec-b3ac-8e3e5e0e2e43",
+        "creationDate": "2022-12-21T14:30:00.000Z",
+        "description": "Create a dedicated slice for airport baggage handling automation systems.",
+        "lifecycleStatus": "Active",
+        "name": "AirportBaggageHandlingSlice",
+        "statusChangeDate": "2022-12-21T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Dedicated slice for airport baggage handling automation systems",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThanEqual"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "id": "uuid-1",
+    "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/uuid-1",
+    "creationDate": "2023-08-15T14:30:00Z",
+    "description": "Deploy network resources for a temporary disaster recovery command center.",
+    "lifecycleStatus": "Active",
+    "name": "DisasterRecoveryCommandCenter",
+    "statusChangeDate": "2023-08-15T14:30:00Z",
+    "version": "1.0",
+    "priority": "1",
+    "isBundled": false,
+    "context": "Autonomous networking",
+    "expression": {
+      "expressionValue": {
+        "@context": {
+          "name": "http://rdf.data-vocabulary.org/#name",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+        },
+        "@graph": [
+          {
+            "@id": "_:intent1",
+            "@type": "tio:Intent",
+            "tio:description": "Disaster recovery command center network deployment",
+            "tio:hasExpectation": {
+              "@id": "_:exp1"
+            }
+          },
+          {
+            "@id": "_:exp1",
+            "@type": "tio:Expectation",
+            "tio:target": {
+              "@id": "_:target1"
+            },
+            "tio:hasCharacteristic": [
+              {
+                "@id": "_:char1"
+              }
+            ]
+          },
+          {
+            "@id": "_:target1",
+            "@type": "tio:Resource",
+            "name": "NetworkDeployment",
+            "tio:specification": "DisasterRecovery"
+          },
+          {
+            "@id": "_:char1",
+            "@type": "tio:Characteristic",
+            "name": "latency",
+            "value": "low",
+            "tio:operator": "lessThan"
+          }
+        ]
+      },
+      "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+      "@baseType": "Expression",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+      "@type": "JsonLdExpression"
+    }
+  },
+  {
+    "intents": [
+      {
+        "id": "e7c1d1b5-8f44-4d2a-a0cd-ae9f0ca33d3e",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/e7c1d1b5-8f44-4d2a-a0cd-ae9f0ca33d3e",
+        "creationDate": "2023-03-16T14:30:00.000Z",
+        "description": "Establish maritime communication links for autonomous shipping vessels.",
+        "lifecycleStatus": "Active",
+        "name": "MaritimeLinkIntent",
+        "statusChangeDate": "2023-03-16T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous shipping",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Maritime communication links for autonomous shipping vessels",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "MaritimeCommunicationLink",
+                "tio:specification": "wireless"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "0a7d1e5f-6c9b-4b3a-a2d8-bc53daefee15",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/0a7d1e5f-6c9b-4b3a-a2d8-bc53daefee15",
+        "creationDate": "2023-03-17T14:30:00.000+00:00",
+        "description": "Configure network prioritization for critical government infrastructure.",
+        "lifecycleStatus": "Active",
+        "name": "GovernmentInfrastructurePrioritization",
+        "statusChangeDate": "2023-03-17T14:30:00.000+00:00",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Government infrastructure prioritization",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkPrioritization",
+                "tio:specification": "government infrastructure"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "prioritization",
+                "value": "configured",
+                "tio:operator": "equal"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "5b3c6e4a-2d93-49eb-a0f8-1d7dbb9a1fa3",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/5b3c6e4a-2d93-49eb-a0f8-1d7dbb9a1fa3",
+        "creationDate": "2023-08-16T14:30:00Z",
+        "description": "Create a slice for cloud gaming services with consistent 60fps performance.",
+        "lifecycleStatus": "Active",
+        "name": "HighSpeedSliceForCloudGaming",
+        "statusChangeDate": "2023-08-16T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "High speed slice for cloud gaming services",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "6b8c5f11-4d36-41a3-a9db-1e0ca4d2de15",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/6b8c5f11-4d36-41a3-a9db-1e0ca4d2de15",
+        "creationDate": "2023-03-16T14:30:00Z",
+        "description": "Deploy a campus-wide network for university research laboratories.",
+        "lifecycleStatus": "Active",
+        "name": "CampusNetworkDeployment",
+        "statusChangeDate": "2023-03-16T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Campus-wide network deployment for university research laboratories",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "CampusNetwork",
+                "tio:specification": "Research"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intentManagementAPI_v5": [
+      {
+        "id": "c7a4f9fa-2e6d-48b3-b0b1-f4b1db94a92e",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/c7a4f9fa-2e6d-48b3-b0b1-f4b1db94a92e",
+        "creationDate": "2023-09-15T14:30:00.000+02:00",
+        "description": "Set up encrypted channels for defense communications with anti-jamming features.",
+        "lifecycleStatus": "Active",
+        "name": "DefenseEncryption",
+        "statusChangeDate": "2023-09-15T14:30:00.000+02:00",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Cybersecurity",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Defense encryption with anti-jamming features",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "CommunicationChannel",
+                "tio:specification": "Encrypted"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "JammingResistance",
+                "value": "anti-jamming",
+                "tio:operator": "hasProperty"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "items": [
+      {
+        "id": "uuid:12345678-abcd-4567-abcd-123456789012",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/uuid:12345678-abcd-4567-abcd-123456789012",
+        "creationDate": "2023-09-15T14:30:00.000Z",
+        "description": "Provision bandwidth for a large-scale online examination system.",
+        "lifecycleStatus": "Active",
+        "name": "HighBandwidthForExaminationSystem",
+        "statusChangeDate": "2023-09-15T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "High bandwidth for examination system",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "OnlineExaminationSystem",
+                "tio:specification": "large-scale"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "c5d5f7a4-2f15-4558-b9f6-fb43e6a9443a",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/c5d5f7a4-2f15-4558-b9f6-fb43e6a9443a",
+        "creationDate": "2023-02-20T14:30:00Z",
+        "description": "Create a network for smart warehouse robotics with synchronized operations.",
+        "lifecycleStatus": "Active",
+        "name": "SmartWarehouseRoboticsNetwork",
+        "statusChangeDate": "2023-02-20T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Smart warehouse robotics network",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "synchronization",
+                "value": "highly synchronized",
+                "tio:operator": "synced"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "e9b1a6f3-f6ca-49ce-b8f5-c8c0db7a93ec",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/e9b1a6f3-f6ca-49ce-b8f5-c8c0db7a93ec",
+        "creationDate": "2023-03-21T14:30:00Z",
+        "description": "Deploy connectivity for a fleet of connected ambulances with patient monitoring.",
+        "lifecycleStatus": "Active",
+        "name": "ConnectedAmbulanceNetworkSlice",
+        "statusChangeDate": "2023-03-21T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Connected ambulance network slice",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "9f3c5a44-43d7-4e1b-b4f8-2af94f4c7ec0",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/9f3c5a44-43d7-4e1b-b4f8-2af94f4c7ec0",
+        "creationDate": "2023-02-15T14:30:00Z",
+        "description": "Establish a slice for industrial automation with deterministic networking.",
+        "lifecycleStatus": "Active",
+        "name": "IndustrialAutomationSlice",
+        "statusChangeDate": "2023-02-15T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Industrial automation",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Industrial automation slice with deterministic networking",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "SliceForIndustrialAutomation",
+                "tio:specification": "deterministicNetworking"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intentManagementApi": [
+      {
+        "id": "8f4c7e1d-9b23-4e2a-b93c-fd5a3a6edfc7",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/8f4c7e1d-9b23-4e2a-b93c-fd5a3a6edfc7",
+        "creationDate": "2023-02-20T14:30:00.000Z",
+        "description": "Configure dynamic spectrum sharing for enterprise and public safety users.",
+        "lifecycleStatus": "Active",
+        "name": "DSSforEnterpriseandPublicSafetyUsers",
+        "statusChangeDate": "2023-02-20T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Network Slicing",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "DSS for Enterprise and Public Safety Users",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5b2a3c4d-6f44-4567-a8b9-c94cc9dd1e02",
+    "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/5b2a3c4d-6f44-4567-a8b9-c94cc9dd1e02",
+    "creationDate": "2023-03-16T14:30:00.000Z",
+    "description": "Create a broadcast network for distance learning with interactive features.",
+    "lifecycleStatus": "Active",
+    "name": "DistanceLearningBroadcast",
+    "statusChangeDate": "2023-03-16T14:30:00.000Z",
+    "version": "1.0",
+    "priority": "1",
+    "isBundled": false,
+    "context": "Education",
+    "expression": {
+      "expressionValue": {
+        "@context": {
+          "name": "http://rdf.data-vocabulary.org/#name",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+        },
+        "@graph": [
+          {
+            "@id": "_:intent1",
+            "@type": "tio:Intent",
+            "tio:description": "Broadcast network for distance learning with interactive features",
+            "tio:hasExpectation": {
+              "@id": "_:exp1"
+            }
+          },
+          {
+            "@id": "_:exp1",
+            "@type": "tio:Expectation",
+            "tio:target": {
+              "@id": "_:target1"
+            },
+            "tio:hasCharacteristic": [
+              {
+                "@id": "_:char1"
+              }
+            ]
+          },
+          {
+            "@id": "_:target1",
+            "@type": "tio:Resource",
+            "name": "BroadcastNetwork",
+            "tio:specification": "distanceLearning"
+          },
+          {
+            "@id": "_:char1",
+            "@type": "tio:Characteristic",
+            "name": "interactivity",
+            "value": "high",
+            "tio:operator": "greaterThanOrEqualTo"
+          }
+        ]
+      },
+      "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+      "@baseType": "Expression",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+      "@type": "JsonLdExpression"
+    }
+  },
+  {
+    "intents": [
+      {
+        "id": "8a5d98f6-02c2-42e9-a0b6-c3c43b7e8ed4",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/8a5d98f6-02c2-42e9-a0b6-c3c43b7e8ed4",
+        "creationDate": "2023-08-25T14:30:00Z",
+        "description": "Deploy a slice for smart parking systems across multiple shopping centers.",
+        "lifecycleStatus": "Active",
+        "name": "SmartParkingSlice",
+        "statusChangeDate": "2023-08-25T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Smart parking slice deployment",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "SmartParkingSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "9f83c2a3-4e5b-49d7-8e13-bb93d1ddc0a6",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/9f83c2a3-4e5b-49d7-8e13-bb93d1ddc0a6",
+        "creationDate": "2023-08-14T14:30:00Z",
+        "description": "Set up a private network for pharmaceutical cold chain monitoring.",
+        "lifecycleStatus": "Active",
+        "name": "PharmaNetworkSetup",
+        "statusChangeDate": "2023-08-14T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Healthcare",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Private network for pharma cold chain monitoring",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "PrivateNetwork",
+                "tio:specification": "MTC"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "123e4567-e89b-12d3-a456-426614174000",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/123e4567-e89b-12d3-a456-426614174000",
+        "creationDate": "2023-02-27T14:30:00.000Z",
+        "description": "Provision edge AI processing for real-time surveillance camera analytics.",
+        "lifecycleStatus": "Active",
+        "name": "EdgeAIProcessing",
+        "statusChangeDate": "2023-02-27T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Network slicing",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Edge AI processing for real-time surveillance camera analytics.",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "SurveillanceCameraAnalytics",
+                "tio:specification": "real-time"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "processingTime",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intentManagement": [
+      {
+        "id": "urn:uuid:3e4a7b5d-0f16-43da-bc9f-f45c4aece8eb",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/urn:uuid:3e4a7b5d-0f16-43da-bc9f-f45c4aece8eb",
+        "creationDate": "2023-03-14T12:00:00.000Z",
+        "description": "Create a network slice for multiplayer mobile gaming with regional servers.",
+        "lifecycleStatus": "Active",
+        "name": "RegionalGamingSlice",
+        "statusChangeDate": "2023-03-14T12:00:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Regional gaming network slice",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  },
+                  {
+                    "@id": "_:char2"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "regional servers"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              },
+              {
+                "@id": "_:char2",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "bce4f5d6-8c41-47e2-bf7a-f8bb8f3ad94a",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/bce4f5d6-8c41-47e2-bf7a-f8bb8f3ad94a",
+        "creationDate": "2023-09-19T14:30:00Z",
+        "description": "Deploy connectivity for smart street lighting with adaptive brightness control.",
+        "lifecycleStatus": "Active",
+        "name": "SmartStreetLighting",
+        "statusChangeDate": "2023-09-19T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Smart street lighting with adaptive brightness control",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "8b4a5c70-3f44-4f1d-a9e2-f6d6e7c0c9ac",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/8b4a5c70-3f44-4f1d-a9e2-f6d6e7c0c9ac",
+        "creationDate": "2023-03-16T14:30:00.000Z",
+        "description": "Establish communication links for high-frequency algorithmic trading systems.",
+        "lifecycleStatus": "Active",
+        "name": "HighFrequencyTradingLinks",
+        "statusChangeDate": "2023-03-16T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Financial Services",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "High-frequency trading links",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "CommunicationLinks",
+                "tio:specification": "high-frequency"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "ultra-low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "9d2c93f5-0e3a-4b44-a53a-d94f7d6ec0cc",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/9d2c93f5-0e3a-4b44-a53a-d94f7d6ec0cc",
+        "creationDate": "2023-02-16T14:30:00.000Z",
+        "description": "Configure a slice for connected vehicle infotainment and diagnostics.",
+        "lifecycleStatus": "Active",
+        "name": "ConnectedVehicleSliceConfig",
+        "statusChangeDate": "2023-02-16T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Connected vehicle infotainment and diagnostics slice",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "InfotainmentAndDiagnostics"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThanOrEqualTo"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "8e3d6c69-4f9b-46a1-b5f8-c9d7eb67accc",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/8e3d6c69-4f9b-46a1-b5f8-c9d7eb67accc",
+        "creationDate": "2023-03-15T14:30:00Z",
+        "description": "Create a network for remote equipment monitoring in mining operations.",
+        "lifecycleStatus": "Active",
+        "name": "RemoteEquipmentMonitoringNetworkSlice",
+        "statusChangeDate": "2023-03-15T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Mining operations",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Remote equipment monitoring network slice",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "Industrial"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "1a3b4c5d6e7f8g",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/1a3b4c5d6e7f8g",
+        "creationDate": "2022-12-08T14:30:00.000Z",
+        "description": "Deploy temporary capacity for a major sporting event with millions of fans.",
+        "lifecycleStatus": "Active",
+        "name": "TemporaryCapacityForSportingEvent",
+        "statusChangeDate": "2022-12-08T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Temporary capacity for a major sporting event with millions of fans",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intentManagement": [
+      {
+        "id": "4f5a9d13-94b0-4762-a63c-45e54d3f6c7a",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/4f5a9d13-94b0-4762-a63c-45e54d3f6c7a",
+        "creationDate": "2023-08-18T14:30:00.000Z",
+        "description": "Set up secure channels for electronic voting infrastructure.",
+        "lifecycleStatus": "Active",
+        "name": "SecureElectionInfrastructure",
+        "statusChangeDate": "2023-08-18T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Secure electronic voting infrastructure",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "SecureChannels",
+                "tio:specification": "encrypted"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "securityLevel",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "6a1e8b5c-5f7d-4af3-b9db-f4f9c2ed85ac",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/6a1e8b5c-5f7d-4af3-b9db-f4f9c2ed85ac",
+        "creationDate": "2023-09-27T14:30:00.000Z",
+        "description": "Provision a slice for augmented reality tourist guide applications.",
+        "lifecycleStatus": "Active",
+        "name": "AugmentedRealitySlice",
+        "statusChangeDate": "2023-09-27T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Augmented reality tourist guide applications",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intentManagement": [
+      {
+        "id": "9f89e3d2-8f6a-4cfa-b7eb-fc5bfc5bfc5b",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/9f89e3d2-8f6a-4cfa-b7eb-fc5bfc5bfc5b",
+        "creationDate": "2023-09-21T14:30:00.000Z",
+        "description": "Create dedicated bandwidth for critical software update distribution.",
+        "lifecycleStatus": "Active",
+        "name": "DedicatedBandwidthForSoftwareUpdate",
+        "statusChangeDate": "2023-09-21T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Dedicated bandwidth for software update distribution",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "HighSpeed"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "dedicated",
+                "tio:operator": "equal"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intentManagementAPI": [
+      {
+        "id": "9e4a5b6c-f4d7-47a5-b1f0-df73ef85f0a2",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/9e4a5b6c-f4d7-47a5-b1f0-df73ef85f0a2",
+        "creationDate": "2023-08-25T14:30:00.000Z",
+        "description": "Deploy network resources for a virtual reality training simulation center.",
+        "lifecycleStatus": "Active",
+        "name": "VirtualRealityTrainingSimulation",
+        "statusChangeDate": "2023-08-25T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Network resources for virtual reality training simulation center",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkResources",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "d2a4c7ee-6e3f-47b9-a3ed-b9e8d5c4f6eb",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/d2a4c7ee-6e3f-47b9-a3ed-b9e8d5c4f6eb",
+        "creationDate": "2023-02-20T14:30:00.000+01:00",
+        "description": "Establish communication for smart grid demand response programs.",
+        "lifecycleStatus": "Active",
+        "name": "SmartGridDemandResponse",
+        "statusChangeDate": "2023-02-20T14:30:00.000+01:00",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Establish communication for smart grid demand response programs.",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "CommunicationService",
+                "tio:specification": "high-speed"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThanEqual"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "4c1d9f6e-5b2a-4164-a41e-d7a8dd2a1cc3",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/4c1d9f6e-5b2a-4164-a41e-d7a8dd2a1cc3",
+        "creationDate": "2023-08-04T14:30:00.000Z",
+        "description": "Configure a slice for contactless payment systems in public transportation.",
+        "lifecycleStatus": "Active",
+        "name": "ContactlessPaymentSlice",
+        "statusChangeDate": "2023-08-04T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Public transportation",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Contactless payment system slice",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intentManagement": [
+      {
+        "id": "uuid-1",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/uuid-1",
+        "creationDate": "2023-03-14T14:30:00.000Z",
+        "description": "Create connectivity for environmental sensors monitoring air and water quality.",
+        "lifecycleStatus": "Active",
+        "name": "EnvironmentalMonitoringSlice",
+        "statusChangeDate": "2023-03-14T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Environmental monitoring",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Environmental monitoring connectivity",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "4e7a2c3f-9b8d-47ca-b74a-f5d1dd0c89da",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/4e7a2c3f-9b8d-47ca-b74a-f5d1dd0c89da",
+        "creationDate": "2023-03-15T14:30:00Z",
+        "description": "Deploy a network for automated container terminal operations at a port.",
+        "lifecycleStatus": "Active",
+        "name": "ContainerTerminalOperations",
+        "statusChangeDate": "2023-03-15T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Automated container terminal operations network",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "Network",
+                "tio:specification": "Custom"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThanOrEqual"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "9e3b1cc5-8c45-4f6a-b94d-af7e43eddb0c",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/9e3b1cc5-8c45-4f6a-b94d-af7e43eddb0c",
+        "creationDate": "2023-08-01T14:30:00.000Z",
+        "description": "Set up isolated segments for healthcare patient data transmission.",
+        "lifecycleStatus": "Active",
+        "name": "HealthcareDataTransmissionIntent",
+        "statusChangeDate": "2023-08-01T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Isolated segments for healthcare patient data transmission",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSegment",
+                "tio:specification": "Isolated"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "securityLevel",
+                "value": "high",
+                "tio:operator": "is"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "id": "0d3b8f43-5c9a-4e2a-b1f7-ae93df1c5f6d",
+    "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/0d3b8f43-5c9a-4e2a-b1f7-ae93df1c5f6d",
+    "creationDate": "2023-02-23T14:30:00Z",
+    "description": "Provision bandwidth for a distributed blockchain validation network.",
+    "lifecycleStatus": "Active",
+    "name": "BlockchainValidation",
+    "statusChangeDate": "2023-02-23T14:30:00Z",
+    "version": "1.0",
+    "priority": "1",
+    "isBundled": false,
+    "context": "Distributed blockchain validation network",
+    "expression": {
+      "expressionValue": {
+        "@context": {
+          "name": "http://rdf.data-vocabulary.org/#name",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+        },
+        "@graph": [
+          {
+            "@id": "_:intent1",
+            "@type": "tio:Intent",
+            "tio:description": "Provision bandwidth for a distributed blockchain validation network.",
+            "tio:hasExpectation": {
+              "@id": "_:exp1"
+            }
+          },
+          {
+            "@id": "_:exp1",
+            "@type": "tio:Expectation",
+            "tio:target": {
+              "@id": "_:target1"
+            },
+            "tio:hasCharacteristic": [
+              {
+                "@id": "_:char1"
+              }
+            ]
+          },
+          {
+            "@id": "_:target1",
+            "@type": "tio:Resource",
+            "name": "NetworkSlice",
+            "tio:specification": "HighBandwidth"
+          },
+          {
+            "@id": "_:char1",
+            "@type": "tio:Characteristic",
+            "name": "bandwidth",
+            "value": "high",
+            "tio:operator": "greaterThan"
+          }
+        ]
+      },
+      "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+      "@baseType": "Expression",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+      "@type": "JsonLdExpression"
+    }
+  },
+  {
+    "intents": [
+      {
+        "id": "b1f5f7c0-93ad-4a3e-b2d6-f7ec5e44da45",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/b1f5f7c0-93ad-4a3e-b2d6-f7ec5e44da45",
+        "creationDate": "2023-09-08T14:30:00Z",
+        "description": "Create a slice for precision agriculture with drone swarm coordination.",
+        "lifecycleStatus": "Active",
+        "name": "PrecisionAgricultureSlice",
+        "statusChangeDate": "2023-09-08T14:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Precision agriculture slice with drone swarm coordination",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "PrecisionAgricultureSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "1f7c4b2a-4c6d-48f9-a94e-0c6fb5d3e8f4",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/1f7c4b2a-4c6d-48f9-a94e-0c6fb5d3e8f4",
+        "creationDate": "2023-03-14T09:30:00Z",
+        "description": "Deploy connectivity for smart retail checkout-free shopping experiences.",
+        "lifecycleStatus": "Active",
+        "name": "SmartRetailCheckoutFree",
+        "statusChangeDate": "2023-03-14T09:30:00Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Smart retail checkout-free shopping connectivity deployment",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "2e8bb8f6-45a3-4c1d-a7a5-d9a0c7bfb44",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/2e8bb8f6-45a3-4c1d-a7a5-d9a0c7bfb44",
+        "creationDate": "2023-03-16T14:30:00.000Z",
+        "description": "Establish links for remote construction equipment operation and monitoring.",
+        "lifecycleStatus": "Active",
+        "name": "RemoteConstructionMonitoring",
+        "statusChangeDate": "2023-03-16T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Remote construction monitoring and operation",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkSlice",
+                "tio:specification": "eMBB"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "bandwidth",
+                "value": "high",
+                "tio:operator": "greaterThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "9d83c6a5-7e8f-4a14-b3ed-f2e6f5ee77f1",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/9d83c6a5-7e8f-4a14-b3ed-f2e6f5ee77f1",
+        "creationDate": "2022-09-16T14:30:00.000Z",
+        "description": "Configure network for distributed energy resource management systems.",
+        "lifecycleStatus": "Active",
+        "name": "DistributedEnergyManagement",
+        "statusChangeDate": "2022-09-16T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Distributed energy resource management systems",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkConfiguration",
+                "tio:specification": "DistributedEnergyManagement"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "7b9a1e41-2c4f-49d5-a44d-cf0cc76f53f3",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/7b9a1e41-2c4f-49d5-a44d-cf0cc76f53f3",
+        "creationDate": "2023-08-24T14:30:00.000Z",
+        "description": "Create a broadcast slice for emergency alert and notification systems.",
+        "lifecycleStatus": "Active",
+        "name": "EmergencyBroadcastSlice",
+        "statusChangeDate": "2023-08-24T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Emergency broadcast slice creation",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "BroadcastSlice",
+                "tio:specification": "EmergencyAlert"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  },
+  {
+    "intents": [
+      {
+        "id": "4f9b8c3a-6ec5-48a2-bf7d-e1b98ca7eb94",
+        "href": "https://mycsp.com:8080/tmf-api/intentManagement/v5/intent/4f9b8c3a-6ec5-48a2-bf7d-e1b98ca7eb94",
+        "creationDate": "2023-03-16T14:30:00.000Z",
+        "description": "Deploy a network for connected public safety body cameras with live streaming.",
+        "lifecycleStatus": "Active",
+        "name": "PublicSafetyBodyCameras",
+        "statusChangeDate": "2023-03-16T14:30:00.000Z",
+        "version": "1.0",
+        "priority": "1",
+        "isBundled": false,
+        "context": "Autonomous networking",
+        "expression": {
+          "expressionValue": {
+            "@context": {
+              "name": "http://rdf.data-vocabulary.org/#name",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "tio": "http://tio.models.tmforum.org/tio/v1.0.0/IntentCommonModel#"
+            },
+            "@graph": [
+              {
+                "@id": "_:intent1",
+                "@type": "tio:Intent",
+                "tio:description": "Public safety body cameras network deployment",
+                "tio:hasExpectation": {
+                  "@id": "_:exp1"
+                }
+              },
+              {
+                "@id": "_:exp1",
+                "@type": "tio:Expectation",
+                "tio:target": {
+                  "@id": "_:target1"
+                },
+                "tio:hasCharacteristic": [
+                  {
+                    "@id": "_:char1"
+                  }
+                ]
+              },
+              {
+                "@id": "_:target1",
+                "@type": "tio:Resource",
+                "name": "NetworkDeployment",
+                "tio:specification": "LiveStreaming"
+              },
+              {
+                "@id": "_:char1",
+                "@type": "tio:Characteristic",
+                "name": "latency",
+                "value": "low",
+                "tio:operator": "lessThan"
+              }
+            ]
+          },
+          "iri": "http://tio.models.tmforum.org/tio/v2.0.0/IntentCommonModel/",
+          "@baseType": "Expression",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/JsonLdExpression.schema.json",
+          "@type": "JsonLdExpression"
+        }
+      }
+    ]
+  }
+]
