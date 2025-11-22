@@ -1,0 +1,10 @@
+groq>=0.4.0
+google-generativeai>=0.3.0
+together>=0.2.0
+requests>=2.31.0
+jsonschema>=4.19.0
+rdflib>=7.0.0
+tqdm>=4.66.0
+python-dateutil>=2.8.2
+python-dotenv>=1.0.0
+tenacity>=8.2.0
