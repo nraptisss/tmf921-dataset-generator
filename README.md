@@ -1,31 +1,27 @@
-# TMF921 Intent Dataset Generator
+# TMF921 RAG Research System
 
-🚀 Automated generation of TMF921-compliant Intent JSON structures from natural language telecom intents using free LLM APIs.
+🚀 **RAG-Enhanced TMF921 Intent Translation Research** - Comparing baseline vs. retrieval-augmented generation for translating natural language telecom intents into TMF921-compliant JSON structures.
 
 [![TMF921](https://img.shields.io/badge/TMF921-v5.0.0-blue)](https://www.tmforum.org/)
 [![Python](https://img.shields.io/badge/Python-3.8+-green)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## 📊 Project Results
-
-- ✅ **829 TMF921-compliant intents** generated
-- ✅ **100% validation pass rate**
-- ✅ **2.5 minutes** total generation time
-- ✅ **$0 cost** using Groq free tier
-- ✅ **Zero failures** during generation
-
 ## 🎯 Overview
 
-This project automatically translates natural language telecom intents into TMF921 (Intent Management) compliant JSON structures with embedded Turtle RDF expressions. It leverages state-of-the-art LLMs (Groq's llama-3.1-70b-versatile) to generate production-quality telecom intent specifications.
+This research project implements and evaluates a **Retrieval-Augmented Generation (RAG)** system for translating natural language telecom intents into TMF921 (Intent Management) compliant JSON structures with embedded Turtle RDF expressions.
+
+### Research Question
+
+**Does RAG improve the quality and consistency of LLM-generated TMF921 intents compared to baseline few-shot prompting?**
 
 ### Key Features
 
-- 🤖 **LLM-Powered Translation**: Uses Groq API for ultra-fast generation
-- 📋 **Multi-Level Validation**: JSON structure, Turtle RDF syntax, and TMF921 semantics
-- 🔄 **Resume Capability**: Automatic checkpointing every 50 intents
-- 📊 **Progress Tracking**: Real-time progress bars and comprehensive logging
-- 🛡️ **Template Fallback**: Ensures 100% generation success
-- 🔍 **Intent Categorization**: Automatic parameter extraction and service type mapping
+- 🔍 **RAG System**: Vector database with 663 training examples
+- 📊 **Multiple Strategies**: Top-K, MMR, and Hybrid retrieval
+- 🆚 **Baseline Comparison**: Direct translation without retrieval
+- 🤖 **Free API Stack**: Groq (primary), Gemini, HuggingFace support
+- ⚡ **Quick Testing**: `run.py` and `test.py` utilities
+- 📈 **Experiment Framework**: Automated comparison and metrics
 
 ## 🚀 Quick Start
 
@@ -38,7 +34,7 @@ This project automatically translates natural language telecom intents into TMF9
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/tmf921-dataset-generator.git
+git clone https://github.com/nraptisss/tmf921-dataset-generator.git
 cd tmf921-dataset-generator
 
 # Install dependencies
@@ -49,122 +45,167 @@ cp .env.example .env
 # Edit .env and add your GROQ_API_KEY
 ```
 
-### Usage
+### Quick Test
 
 ```bash
-# Test with 10 intents
-python generate_dataset.py --max 10
+# Test database connection
+python test.py --database
 
-# Generate full dataset (829 intents)
-python generate_dataset.py
+# Test LLM connection
+python test.py --llm
 
-# Validate the generated dataset
-python validator.py
+# Test single intent translation
+python test.py "Create a network slice for emergency services"
+```
+
+### Run Experiments
+
+```bash
+# Pilot test (10 intents)
+python run.py --pilot
+
+# Full experiments (83 test intents)
+python run.py --full
+
+# View results
+python run.py --show-results
+python run.py --compare
 ```
 
 ## 📁 Project Structure
 
 ```
 tmf921-dataset-generator/
-├── generate_dataset.py       # Main orchestration script
-├── llm_interface.py          # Multi-provider LLM API wrapper
-├── tmf921_templates.py       # TMF921 intent templates
-├── intent_categorizer.py     # Intent analysis & categorization
-├── intent_translator.py      # LLM-powered translation engine
-├── validator.py              # Comprehensive TMF921 validator
-├── telecom_intents.json      # Input: 830 natural language intents
-├── requirements.txt          # Python dependencies
-├── README.md                 # This file
-├── .env.example              # Environment configuration template
-└── output/
-    ├── tmf921_dataset.json   # Generated dataset
-    ├── validation_report.json # Validation results
-    └── checkpoints/          # Progress checkpoints
+├── run.py                    # Quick experiment runner
+├── test.py                   # Component testing utility
+├── requirements.txt
+├── README.md
+│
+├── docs/                     # Documentation (11 files)
+│   ├── RESEARCH_QUICKSTART.md
+│   ├── RAG_SETUP.md
+│   ├── SETUP_GUIDE.md
+│   └── ...
+│
+├── src/                      # Source code
+│   ├── core/                 # Core modules
+│   │   ├── llm_interface.py
+│   │   ├── intent_translator.py
+│   │   ├── tmf921_templates.py
+│   │   ├── intent_categorizer.py
+│   │   └── validator.py
+│   ├── rag/                  # RAG system
+│   │   ├── build_vector_db.py
+│   │   ├── rag_retriever.py
+│   │   └── rag_translator.py
+│   └── scripts/              # Utility scripts
+│       ├── generate_dataset.py
+│       └── split_dataset.py
+│
+├── experiments/              # Experiment framework
+│   ├── run_experiments.py
+│   ├── pilot_test.py
+│   └── results/
+│
+├── data/                     # Datasets
+│   ├── raw/                  # telecom_intents.json (830)
+│   ├── processed/            # train/val/test splits
+│   │   ├── train_intents.json (663)
+│   │   ├── val_intents.json   (83)
+│   │   └── test_intents.json  (83)
+│   └── output/               # Generated datasets
+│
+├── resources/                # Reference materials
+│   ├── specifications/       # TMF921 PDFs
+│   └── examples/             # TMF921 examples
+│
+└── vector_db/                # ChromaDB storage (663 vectors)
 ```
+
+## 🔬 Research Methodology
+
+### Dataset
+- **830 telecom intents** covering diverse scenarios
+- **80/10/10 split**: 663 train, 83 val, 83 test
+- **Vector DB**: 663 training examples with sentence-transformers embeddings
+
+### Experiments
+
+1. **Baseline**: Direct translation (no retrieval)
+2. **RAG Top-K (k=3)**: Retrieve 3 most similar examples
+3. **RAG Top-K (k=5)**: Retrieve 5 most similar examples
+4. **RAG MMR (k=5)**: Maximum Marginal Relevance for diversity
+
+### Evaluation Metrics
+- Semantic similarity to reference
+- TMF921 compliance
+- Turtle RDF validity
+- Generation consistency
 
 ## 🔧 Configuration
 
 ### API Providers
 
-The system supports multiple free LLM API providers:
-
-1. **Groq** (Recommended)
-   - Fastest option (1-3 hours for full dataset)
-   - 14,400 requests/day free tier
-   - Model: `llama-3.1-70b-versatile`
-
-2. **Google Gemini**
-   - 1,500 requests/day free tier
-   - Model: `gemini-1.5-flash`
-
-3. **Together AI**
-   - $25 free credit for new users
-   - Model: `meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo`
-
-To switch providers:
+**Groq** (Recommended)
 ```bash
-python generate_dataset.py --provider gemini
+python run.py --pilot
+# Uses Groq by default
 ```
 
-## 📊 Output Format
+**Google Gemini**
+```bash
+# Update experiments/run_experiments.py
+llm_provider="gemini"
+```
 
-Each intent pair contains:
-- Original natural language intent
-- TMF921-compliant JSON structure
-- Turtle RDF expression with all required ontologies
-- Generation metadata and timestamps
+**HuggingFace**
+```bash
+# See docs/HUGGINGFACE_SETUP.md
+```
+
+## 📊 Example Output
 
 ```json
 {
   "id": 1,
-  "user_intent": "Create a high-speed network slice...",
+  "user_intent": "Create a network slice for emergency ambulance communications",
   "tmf921_intent": {
-    "name": "Intent_Create_High-speed_Network_Slice_1",
+    "name": "Intent_Emergency_Ambulance_1",
+    "description": "...",
     "expression": {
       "@type": "TurtleExpression",
-      "expressionValue": "@prefix icm: ..."
+      "expressionValue": "@prefix icm: <...> ..."
     },
-    ...
+    "lifecycleStatus": "Created"
   },
   "validation_status": "valid"
 }
 ```
 
-## ✅ Validation
+## 📈 Experiment Results
 
-The validator checks three levels:
-
-1. **JSON Structure**: Required TMF921 fields and types
-2. **Turtle RDF Syntax**: Valid RDF triples with proper namespaces
-3. **TMF921 Semantics**: Expectation patterns, targets, and reporting
-
-```bash
-python validator.py
-```
-
-Results saved to `output/validation_report.json`
-
-## 📈 Performance
-
-- **Generation Speed**: ~0.18 seconds per intent (with Groq)
-- **Success Rate**: 100% (829/829 intents)
-- **Validation**: 100% pass rate across all levels
-- **Dataset Size**: 4.5 MB
+Results are saved in `experiments/results/`:
+- `baseline_YYYYMMDD_HHMMSS.json`
+- `rag_topk_k3_YYYYMMDD_HHMMSS.json`
+- `rag_topk_k5_YYYYMMDD_HHMMSS.json`
+- `rag_mmr_k5_YYYYMMDD_HHMMSS.json`
+- `comparison_YYYYMMDD_HHMMSS.json`
 
 ## 🎓 Use Cases
 
-- TMF921 training data for fine-tuning models
-- Testing & validation of TMF921 implementations
-- Benchmarking NLP intent understanding systems
-- Research in telecom intent modeling
-- TMF921 tooling and API development
-- TMF921 pattern examples and documentation
+- RAG research for structured output generation
+- TMF921 training data generation
+- Baseline vs RAG comparisons
+- Telecom intent modeling research
+- TMF921 tooling development
+- Few-shot learning benchmarks
 
 ## 📚 Documentation
 
-- [Setup Guide](SETUP_GUIDE.md) - Detailed setup instructions
-- [Implementation Plan](implementation_plan.md) - Technical architecture
-- [Walkthrough](walkthrough.md) - Complete project summary
+- [Research Quickstart](docs/RESEARCH_QUICKSTART.md) - Start here!
+- [RAG Setup Guide](docs/RAG_SETUP.md) - Vector DB setup
+- [Quick Commands](docs/QUICK_COMMANDS.md) - Command reference
+- [Setup Guide](docs/SETUP_GUIDE.md) - Detailed setup
 
 ## 🤝 Contributing
 
@@ -178,14 +219,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - TMForum for the TMF921 Intent Management specification
 - Groq for providing ultra-fast free API access
-- llama-3.1-70b-versatile model by Meta
+- ChromaDB for vector storage
+- Sentence Transformers for embeddings
 
 ## 📧 Contact
 
-For questions or issues, please open a GitHub issue or contact [your-email@example.com]
+For questions or issues, please open a GitHub issue.
 
 ---
 
-**Generated with**: Groq llama-3.1-70b-versatile  
+**Research Focus**: RAG vs Baseline for TMF921 Generation  
 **TMF921 Version**: v5.0.0  
-**Dataset Quality**: Production-ready ✨
+**Stack**: 100% Free (Groq + ChromaDB + Sentence Transformers) ✨
